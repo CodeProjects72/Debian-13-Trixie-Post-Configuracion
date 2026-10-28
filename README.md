@@ -48,7 +48,7 @@ deb https://security.debian.org/debian-security/ trixie-security contrib main no
 
 ---
 
-## 03 · Guardar los cambios
+## Guardar los cambios
 
 En `nano`:
 
@@ -60,7 +60,7 @@ CTRL + X    → Salir
 
 ---
 
-## Actualiza Sistema
+## Actualizar El Sistema
 
 ```bash
 sudo apt update && sudo apt upgrade -y
