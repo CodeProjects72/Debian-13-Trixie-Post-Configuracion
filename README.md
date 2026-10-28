@@ -68,51 +68,10 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
-## Códecs y herramientas básicas
+## Códecs, Tipografias, GDebi, Synaptic, Compresores, Desescompresores y Drivers
 
 ```bash
-sudo apt-get install libavcodec-extra curl nano wget git -y
-```
-
----
-
-## Tipografías
-
-```bash
-sudo apt-get install ttf-mscorefonts-installer -y
-```
-
----
-
-## GDebi y Synaptic
-
-```bash
-sudo apt-get install gdebi gdebi-core synaptic -y
-```
-
----
-
-## Compresores y descompresores
-
-```bash
-sudo apt-get install p7zip-full p7zip-rar rar unrar -y
-```
-
----
-
-## Compiladores
-
-```bash
-sudo apt-get install build-essential -y
-sudo apt-get install linux-headers-$(uname -r) -y
-```
-
----
-
-## Drivers de impresoras
-
-```bash
-sudo apt-get install printer-driver-all -y
+sudo apt-get install -y libavcodec-extra curl nano wget git ffmpeg ttf-mscorefonts-installer gdebi gdebi-core synaptic p7zip-full p7zip-rar rar unrar printer-driver-all 
 ```
 
 ---
@@ -120,7 +79,7 @@ sudo apt-get install printer-driver-all -y
 ## Programas y paquetes
 
 ```bash
-sudo apt install cmatrix btop htop fastfetch mousepad evince eog ffmpeg obs-studio kdenlive qbittorrent vlc tilix -y
+sudo apt install -y cmatrix btop htop fastfetch mousepad evince eog obs-studio kdenlive qbittorrent vlc tilix gnome-shell-extension-manager gparted
 ```
 
 ---
@@ -128,19 +87,18 @@ sudo apt install cmatrix btop htop fastfetch mousepad evince eog ffmpeg obs-stud
 ## Flatpak
 
 ```bash
-sudo apt install flatpak
+sudo apt install -y flatpak
 ```
 
 ```bash
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
-## Iconos
+## Iconos y Cursores
 
 ```bash
-sudo apt install papirus-icon-theme bibata-cursor-themes
+sudo apt install -y papirus-icon-theme bibata-cursor-themes
 ```
-
 
 ## VirtualBox
 
