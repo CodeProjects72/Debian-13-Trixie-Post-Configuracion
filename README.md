@@ -1,4 +1,4 @@
-# Guía Completa de Instalación y Configuración Debian 13 Trixie
+# Debian 13 Trixie - Post-Configuraciòn
 
 Configuración básica y programas esenciales para una instalación nueva de Linux.
 
