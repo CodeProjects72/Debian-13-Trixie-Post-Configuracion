@@ -60,7 +60,7 @@ CTRL + X    → Salir
 
 ---
 
-## Actualizar El Sistema
+## Actualizar Sistema
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -164,7 +164,7 @@ sudo tee /etc/apt/sources.list.d/virtualbox.list
 Actualiza la información de los repositorios:
 
 ```bash
-sudo apt update
+sudo apt update -y
 ```
 
 Comprueba la versión disponible:
@@ -267,6 +267,6 @@ Prueba VirtualBox
 
 ```bash
 sudo apt autoremove -y
-sudo apt clean
-sudo apt autoclean
+sudo apt clean -y
+sudo apt autoclean -y
 ```
