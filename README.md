@@ -97,7 +97,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 ## Iconos y Cursores
 
 ```bash
-sudo apt install -y papirus-icon-theme bibata-cursor-themes
+sudo apt install -y papirus-icon-theme bibata-cursor-theme
 ```
 
 ## VirtualBox
