@@ -94,10 +94,36 @@ sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
-## Iconos y Cursores
+## Iconos, Cursor y Tema
 
 ```bash
 sudo apt install -y papirus-icon-theme bibata-cursor-theme
+```
+
+Layan GTK Theme
+
+Instalar las dependencias:
+
+```bash
+sudo apt install gtk2-engines
+```
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/vinceliuice/Layan-gtk-theme.git
+```
+
+Entrar en el directorio:
+
+```bash
+cd Layan-gtk-theme
+```
+
+Ejecutar el instalador:
+
+```bash
+./install.sh
 ```
 
 ## VirtualBox
