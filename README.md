@@ -93,7 +93,7 @@ sudo apt install -y flatpak
 ```bash
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
-
+midnight club 2 soundtrack
 ## Iconos, Cursor y Tema
 
 ```bash
@@ -278,7 +278,10 @@ Guarda el archivo y actualiza el `initramfs`:
 ```bash
 sudo update-initramfs -u
 ```
+```bash
 
+
+```
 Reinicia el sistema:
 
 ```bash
@@ -286,6 +289,78 @@ sudo reboot
 ```
 
 Prueba VirtualBox
+
+---
+
+### ZSH Terminal
+
+Instalar Zsh y dependencias 
+
+```bash
+sudo apt install -y zsh git curl
+```
+
+
+Instalar la fuente MesloLGS NF
+
+Powerlevel10k necesita esta fuente para mostrar los iconos. Sin ella verás cuadros o símbolos rotos.
+
+```bash
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+curl -fLO "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf"
+curl -fLO "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf"
+curl -fLO "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf"
+curl -fLO "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf"
+fc-cache -fv
+cd ~
+```
+
+Descargar Powerlevel10k
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+touch ~/.zshrc
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+```
+
+Configurar la fuente en Tilix
+ - Abre Tilix y ve al menú (☰) → Preferencias.
+ - Entra en Perfiles → tu perfil (Default) → pestaña Texto.
+ - Activa Fuente personalizada y elige MesloLGS NF Regular, tamaño 12.
+
+Poner Zsh como shell por defecto
+
+```bash
+chsh -s $(which zsh)
+```
+
+Cierra y vuelve a abrir el terminal
+
+
+## ZSH Usuario Root
+
+Descargar Powerlevel10k
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+touch ~/.zshrc
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+```
+
+Poner Zsh como shell root
+
+```bash
+chsh -s /usr/bin/zsh root
+```
+
+Configurar tema
+
+```bash
+exec zsh
+```
+
+Listo
 
 ---
 
