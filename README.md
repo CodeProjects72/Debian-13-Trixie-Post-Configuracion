@@ -357,8 +357,6 @@ Configurar tema
 exec zsh
 ```
 
-Listo
-
 ---
 
 ## Limpieza final
