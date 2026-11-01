@@ -278,10 +278,7 @@ Guarda el archivo y actualiza el `initramfs`:
 ```bash
 sudo update-initramfs -u
 ```
-```bash
 
-
-```
 Reinicia el sistema:
 
 ```bash
@@ -320,7 +317,7 @@ Descargar Powerlevel10k
 
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-touch ~/.zshrc
+touch ~/.zshrc```bash
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 ```
 
