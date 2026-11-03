@@ -93,7 +93,9 @@ sudo apt install -y flatpak
 ```bash
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
-midnight club 2 soundtrack
+
+---
+
 ## Iconos, Cursor y Tema
 
 ```bash
@@ -126,6 +128,8 @@ Ejecutar el instalador:
 ./install.sh
 ```
 
+---
+
 ## VirtualBox
 
 Actualiza los repositorios e instala las dependencias necesarias para compilar los módulos de VirtualBox:
@@ -153,7 +157,7 @@ ls -ld /usr/src/linux-headers-$(uname -r)
 
 ---
 
-## Añadir la clave de Oracle
+Añadir la clave de Oracle
 
 Crea el directorio para las claves de APT:
 
@@ -176,9 +180,8 @@ sudo gpg --dearmor \
     /tmp/oracle_vbox.asc
 ```
 
----
 
-## Añadir el repositorio
+Añadir el repositorio
 
 Añade el repositorio oficial de VirtualBox para Debian Trixie:
 
@@ -199,10 +202,6 @@ Comprueba la versión disponible:
 apt policy virtualbox-7.2
 ```
 
----
-
-## Instalar VirtualBox
-
 Instala VirtualBox:
 
 ```bash
@@ -215,9 +214,7 @@ Comprueba la instalación:
 VBoxManage --version
 ```
 
----
-
-## Añadir usuario a VirtualBox
+Añadir usuario a VirtualBox
 
 Añade tu usuario al grupo `vboxusers`:
 
@@ -237,9 +234,7 @@ Comprueba los módulos de VirtualBox:
 lsmod | grep vbox
 ```
 
----
-
-## Solución de conflictos con KVM
+Conflictos con KVM
 
 Si VirtualBox presenta problemas relacionados con los módulos KVM, comprueba si están cargados:
 
@@ -256,9 +251,7 @@ sudo modprobe -r kvm
 
 > Si utilizas Intel, el módulo correspondiente normalmente será `kvm_intel`.
 
----
-
-## Desactivar KVM
+Desactivar KVM
 
 Crea un archivo de configuración para los módulos:
 
@@ -285,78 +278,6 @@ Reinicia el sistema:
 sudo reboot
 ```
 
-Prueba VirtualBox
-
----
-
-### ZSH Terminal
-
-Instalar Zsh y dependencias 
-
-```bash
-sudo apt install -y zsh git curl
-```
-
-
-Instalar la fuente MesloLGS NF
-
-Powerlevel10k necesita esta fuente para mostrar los iconos. Sin ella verás cuadros o símbolos rotos.
-
-```bash
-mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts
-curl -fLO "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf"
-curl -fLO "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf"
-curl -fLO "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf"
-curl -fLO "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf"
-fc-cache -fv
-cd ~
-```
-
-Descargar Powerlevel10k
-
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-touch ~/.zshrc```bash
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
-```
-
-Configurar la fuente en Tilix
- - Abre Tilix y ve al menú (☰) → Preferencias.
- - Entra en Perfiles → tu perfil (Default) → pestaña Texto.
- - Activa Fuente personalizada y elige MesloLGS NF Regular, tamaño 12.
-
-Poner Zsh como shell por defecto
-
-```bash
-chsh -s $(which zsh)
-```
-
-Cierra y vuelve a abrir el terminal
-
-
-## ZSH Usuario Root
-
-Descargar Powerlevel10k
-
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-touch ~/.zshrc
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
-```
-
-Poner Zsh como shell root
-
-```bash
-chsh -s /usr/bin/zsh root
-```
-
-Configurar tema
-
-```bash
-exec zsh
-```
-
 ---
 
 ## Limpieza final
@@ -364,5 +285,4 @@ exec zsh
 ```bash
 sudo apt autoremove -y
 sudo apt clean -y
-sudo apt autoclean -y
 ```
